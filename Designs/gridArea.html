@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: p; }
+.item2 { grid-area: bt; }
+.item3 { grid-area: img; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container-1 {
+  display: grid;
+  grid-template-areas:
+  'img'
+  'p'
+  'bt';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-areas:
+  'bt img img'
+  'bt img img'
+  'p p p';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container-3 {
+  display: grid;
+  grid-template-areas:
+  'p p img'
+  'bt bt img';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container-1 > div, .grid-container-2 > div, .grid-container-3 > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container-1">
+  <div class="item1">p</div>
+  <div class="item2">button</div>
+  <div class="item3">img</div>
+</div>
+<br>
+<div class="grid-container-2">
+  <div class="item1">p</div>
+  <div class="item2">button</div>
+  <div class="item3">img</div>
+</div>
+<br>
+<div class="grid-container-3">
+  <div class="item1">p</div>
+  <div class="item2">button</div>
+  <div class="item3">img</div>
+</div>
+
+</body>
+</html>

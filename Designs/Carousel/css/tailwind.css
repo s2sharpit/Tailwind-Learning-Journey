@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    #img2 {
+        padding: 0 9.97px;
+        box-sizing: border-box;
+    }
+    
+    @media only screen and (max-width: 550px) {
+        #img2 {
+         padding: 0 5.5px;
+        }
+      }
+    
+    #img3 {
+        padding: 0 90px;
+    }
+    @media only screen and (max-width: 550px) {
+        #img3 {
+         padding: 0 50px;
+        }
+      }
+}

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+    .ham, .ham::before, .ham::after {
+        @apply w-7 h-0.5 bg-white rounded-sm transition-all delay-150;
+    }
+    .ham::before {
+        @apply content-[""] absolute -my-2;
+        transition: transform .15s ease-in, margin .15s ease-out .15s;
+    }
+    .ham::after {
+        @apply content-[""] absolute my-2;
+        transition: transform .15s ease-in, margin .15s ease-out .15s;
+    }
+    .menu-btn.open .ham {
+        @apply bg-transparent transition-all;
+    }
+    .menu-btn.open .ham::before {
+        @apply m-0 rotate-45;
+        transition: margin .15s ease-in, transform .15s ease-out .15s;
+    }
+    .menu-btn.open .ham::after {
+        @apply m-0 -rotate-45;
+        transition: margin .15s ease-in, transform .2s ease-out .15s;
+    }
+
+
+    .navLi {
+        @apply w-full text-center py-4 hover:underline transition duration-300;
+    }
+
+    .liLink:hover .ulLink {
+        @apply block;
+    }
+
+    .liLink:hover .spLink {
+        @apply w-full;
+    }
+}

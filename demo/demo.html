@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./main.css'>
+    <style>
+        .container {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.list {
+  width: 500%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list li {
+  width: 20%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="list">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
+      </div>
+      
+      <script>
+        // Get the container and list elements
+const container = document.querySelector('.container');
+const list = document.querySelector('.list');
+
+// Duplicate the list items and append them to the container
+const items = list.innerHTML;
+container.innerHTML += items + items;
+
+// Set the animation properties
+const duration = 5000; // animation duration in ms
+const distance = 100; // distance to move the container
+const totalDistance = container.scrollWidth / 2; // total distance of container
+const iterations = totalDistance / distance; // number of iterations needed
+const speed = totalDistance / duration; // speed in pixels per millisecond
+
+// Set the CSS animation
+list.style.animation = `scroll ${duration}ms linear infinite`;
+
+// Set the interval timer
+setInterval(() => {
+  container.scrollLeft += distance;
+  if (container.scrollLeft >= totalDistance) {
+    container.scrollLeft -= totalDistance;
+  }
+}, duration / iterations);
+
+      </script>
+</body>
+</html>

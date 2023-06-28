@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .small { font: italic 1.8rem  sans-serif; }
+    .smallw {font: bold 2.5rem sans-serif;}
+    .heavy { font: bold 2.7rem sans-serif; }
+  </style>
+  <image x="0" y="0" href="./Logo.png"/>
+  <text x="200" y="50" class="heavy">B. S. Senior Secondary School</text>
+  <text x="200" y="95" class="smallw">Salempur Khadar, Yamuna Nagar</text>
+  <text x="200" y="135" class="small">Affiliated to CBSE, New Delhi upto 10+2 level</text>
+  <text x="200" y="170" class="small">Affiliation No. 531917 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;School No. 41917</text>
+</svg>
